@@ -1,0 +1,60 @@
+#info {
+  background: #f6f6f6;
+}
+
+#infoImg image {
+  width: 100%;
+  height: 400rpx;
+  vertical-align: bottom;
+}
+
+#infoTitle {
+  margin: 10px 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.infoBtn button {
+  background: #ffdd2b;
+  width: 50%;
+  color: #000;
+  border: none;
+  margin: 20px auto;
+}
+
+#infoOther ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  list-style: disc;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+#infoDesc {
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#infoDesc h1 {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#infoDesc h2 {
+  width: 10%;
+  border: 2px solid #ccc;
+  display: block;
+  border-radius: 5px;
+  margin: 5px auto 10px;
+}
+
+#infoDesc p {
+  display: block;
+  color: #999;
+  margin: 0 20px;
+}

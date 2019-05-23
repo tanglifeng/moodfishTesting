@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/find/index",
+    "pages/mine/index",
+    "pages/login/index",
+    "pages/info/info",
+    "pages/question/question",
+    "pages/result/result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI心理鱼测评",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home_no.png",
+        "selectedIconPath": "images/home_yes.png",
+        "text": "测评"
+      },
+      {
+        "pagePath": "pages/find/index",
+        "iconPath": "images/crowd_no.png",
+        "selectedIconPath": "images/crowd_yes.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "images/mine_no.png",
+        "selectedIconPath": "images/mine_yes.png",
+        "text": "个人信息"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxba76f60583b08cb3",
+    "wx52abddb8d922d5f3",
+    "wx7c60d9bb220d6857"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

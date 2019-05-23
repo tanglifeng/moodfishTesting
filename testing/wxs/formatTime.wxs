@@ -1,0 +1,38 @@
+var formatTime = function(date) {
+  if (date.length == 0 || date == undefined) {
+    return;
+  }
+  var val = getDate(date);
+  var year = val.getFullYear()
+  var month = val.getMonth() + 1
+  var day = val.getDate()
+  var hour = val.getHours()
+  var minute = val.getMinutes()
+  var second = val.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+
+}
+
+var formatDate = function(date) {
+  if (date.length == 0 || date == undefined) {
+    return;
+  }
+  var val = getDate(date);
+  var year = val.getFullYear()
+  var month = val.getMonth() + 1
+  var day = val.getDate()
+
+  return [year, month, day].map(formatNumber).join('-')
+
+}
+
+var formatNumber = function(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+module.exports = {
+  formatTime: formatTime,
+  formatDate: formatDate
+}

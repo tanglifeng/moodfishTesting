@@ -1,0 +1,36 @@
+#resImg image {
+  width: 100%;
+  height: 400rpx;
+  vertical-align: bottom;
+}
+
+#resTitle {
+  margin: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#resShareImg image {
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  margin: auto;
+}
+
+#resReport {
+  color: #999;
+  margin: 0 20px;
+}
+
+#resReport p {
+  display: block;
+  margin: 5px 0;
+}
+
+#resBack button {
+  background: #ffdd2b;
+  width: 60%;
+  color: #000;
+  border: none;
+  margin: 40px auto;
+}

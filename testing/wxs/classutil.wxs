@@ -1,0 +1,71 @@
+//问题类别(1-情感、2-性格、3-健康、4-职场、5-人际、6-能力、7-亲子、8-星座趣味)
+var testingClass = function(val) {
+  // console.log('wxs testingClass val=' + val)
+  var info = '';
+  switch (val) {
+    case 1:
+      info = '情感';
+      break;
+    case 2:
+      info = '性格';
+      break;
+    case 3:
+      info = '健康';
+      break;
+    case 4:
+      info = '职场';
+      break;
+    case 5:
+      info = '人际';
+      break;
+    case 6:
+      info = '能力';
+      break;
+    case 7:
+      break;
+      info = '亲子';
+    case 8:
+      info = '星座趣味';
+      break;
+
+  }
+
+  return info;
+}
+
+var classColour = function(val) {
+
+  var info = '#0F0F0F';
+  switch (val) {
+    case 1:
+      info = '#ff0000';
+      break;
+    case 2:
+      info = '#586c94';
+      break;
+    case 3:
+      info = '#01c453';
+      break;
+    case 4:
+      info = '#cca353';
+      break;
+    case 5:
+      info = '#03ccf5';
+      break;
+    case 6:
+      info = '#808080';
+      break;
+    case 7:
+      break;
+      info = '#7e0002';
+      brak;
+    case 8:
+      info = '#ff9a66';
+      break;
+  }
+  return info;
+}
+module.exports = {
+  testingClass: testingClass,
+  classColour: classColour
+}

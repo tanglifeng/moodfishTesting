@@ -1,0 +1,11 @@
+var numstring = function(val) {
+  var str = val;
+  if (val > 10000) {
+    str = (val / 10000).toFixed(2) + 'W';
+  }
+  return str;
+}
+
+module.exports = {
+  numstring: numstring,
+}

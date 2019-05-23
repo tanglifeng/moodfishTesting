@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<wxs src="../../wxs/formatTime.wxs" module="timeutil" />
+<wxs src="../../wxs/classutil.wxs" module="classutil" />
+
+<view class="page">
+  <!-- 个人信息 -->
+  <view id='mineInfo'>
+    <view id='mineInfoImg'>
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view id='mineInfoNick'>
+      {{userInfo.nickName}}
+    </view>
+    <view id='mineInfoScore'>
+      积分:{{score}}
+    </view>
+  </view>
+  <!-- 测试记录 -->
+  <block wx:if='{{testingLogList.length<=0}}'>
+    <view id='mineNoList'>
+      <image src='{{imgUrl}}'></image>
+      <p>暂无记录</p>
+    </view>
+  </block>
+  <block wx:else>
+    <view id='mineTestList'>
+      <view class="weui-cell" style='background:#fff' wx:for="{{testingLogList}}" wx:key="index" data-testinginfo="{{item.testinginfo}}" data-id='{{item.id}}' bindtap='goToResult'>
+        <view class="weui-cell__bd">
+          <p>{{index+1}}.{{item.testinginfo.title}}</p>
+          <p>
+            <b style='color:{{classutil.classColour(item.testinginfo.testclass)}};border:1px solid {{classutil.classColour(item.testinginfo.testclass)}}'>{{classutil.testingClass(item.testinginfo.testclass)}}</b>
+            <b>{{timeutil.formatTime(item.createdAt)}}</b>
+          </p>
+        </view>
+      </view>
+      <!-- <button>查看更多精彩评测</button> -->
+    </view>
+  </block>
+
+
+
+</view>

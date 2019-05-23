@@ -1,0 +1,18 @@
+<!--question.wxml-->
+<view class='page' id='question'>
+  <!-- 题目 -->
+  <view id='queTitle' style='animation:{{addClass}} .5s;opacity:{{opacity}}'>
+    <p>{{curQuestion.title}}</p>
+    <view class='qnum'>
+      <p>第{{curNum}}题/{{questionList.length}}题</p>
+    </view>
+
+  </view>
+  <!-- 选项 -->
+  <radio-group id='queRadio' class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for='{{curQuestion.option}}' wx:key='{{index}}' bindtap='getNextQuestion' data-code='{{item.code}}'>
+      <view>{{item.code}}.{{item.answer}}</view>
+      <radio value="{{item.score}}" checked='{{checked}}' />
+    </label>
+  </radio-group>
+</view>

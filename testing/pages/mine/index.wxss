@@ -1,0 +1,72 @@
+#mineInfo {
+  height: 170px;
+  text-align: center;
+  padding-top: 20px;
+  background: #ffdc52;
+  box-sizing: border-box;
+}
+
+#mineInfoImg image {
+  display: block;
+  margin: auto;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+#mineInfoNick {
+  margin-top: 5px;
+}
+
+#mineInfoScore {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#mineTestList {
+  margin-top: 10px;
+}
+
+#mineNoList image {
+  display: block;
+  height: 200px;
+  width: 300px;
+  margin: 20px auto;
+  /* background: #fff; *//* border-radius: 50%; */
+}
+
+#mineNoList p {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mineTestList .weui-cell__bd p {
+  display: block;
+}
+
+#mineTestList .weui-cell__bd p:nth-child(1) {
+  font-weight: bold;
+}
+
+#mineTestList .weui-cell__bd p:nth-child(2) {
+  margin-left: 10px;
+}
+
+#mineTestList .weui-cell__bd p:nth-child(2) b:first-child {
+  float: left;
+  padding: 1px;
+  border-radius: 3px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+#mineTestList .weui-cell__bd p:nth-child(2) b:last-child {
+  float: right;
+  color: #999;
+  font-size: 14px;
+  margin-top: 15px;
+}

@@ -1,0 +1,46 @@
+<!--result.wxml-->
+<wxs src="../../wxs/numutil.wxs" module="numutil" />
+<wxs src="../../wxs/classutil.wxs" module="classutil" />
+<view id='result'>
+  <view id='resImg'>
+    <image src='{{testinginfo.imgurl}}'></image>
+  </view>
+  <block wx:if='{{isShare}}'>
+    <view id='resTitle'>{{title}}</view>
+    <view id='resShareImg'>
+      <image src='{{shareimg}}'></image>
+    </view>
+    <view id='resBack'>
+      <button open-type="share">分享查看结果</button>
+    </view>
+  </block>
+  <block wx:else>
+    <view id='resTitle'>{{testinginfo.title}}</view>
+    <view id='resTitle'>{{title}}</view>
+    <view id='resReport'>
+      <p wx:for='{{resultInfo}}' wx:key='{{index}}'>{{item}}</p>
+    </view>
+    <view id='resBack'>
+      <button bindtap='goBack' style='margin-bottom:10px'>返回</button>
+      <button open-type="share" wx:if='{{pagetype == 1}}' style='color:#fff;background:#09bb07;margin-top:10px'>分享好友</button>
+    </view>
+  </block>
+  <block wx:if='{{commendList.length>0}}'>
+    <view id='resTitle'>推荐测评</view>
+    <view class='weui-media-box weui-media-box_appmsg' wx:for='{{commendList}}' wx:key='{{index}}' bindtap='goToInfo' data-testinginfo="{{item}}">
+      <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
+        <image class='weui-media-box__thumb' src='{{item.imgurl}}'></image>
+      </view>
+      <view class='weui-media-box__bd weui-media-box__bd_in-appmsg'>
+        <view class='weui-media-box__title'>{{item.title}}</view>
+        <view>
+          <p class='.testListTag'>
+            <b style='color:{{classutil.classColour(item.testclass)}};border:1px solid {{classutil.classColour(item.testclass)}};'>{{classutil.testingClass(item.testclass)}}</b>
+          </p>
+          <p>
+            <b style='color:#f00'>{{numutil.numstring(item.downnum)}}</b>已测</p>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

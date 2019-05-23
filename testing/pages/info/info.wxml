@@ -1,0 +1,46 @@
+<!--info.wxml-->
+<wxs src="../../wxs/formatTime.wxs" module="timeutil" />
+<wxs src="../../wxs/numutil.wxs" module="numutil" />
+
+<view class='page' id='info'>
+  <view style='background:#fff;border-radius: 5px;'>
+    <!-- 图片 -->
+    <view id='infoImg'>
+      <image src='{{testinginfo.imgurl}}'></image>
+    </view>
+    <!-- 标题 -->
+    <view id='infoTitle'>
+      {{testinginfo.title}}
+    </view>
+    <!-- 下一步 -->
+    <view class='infoBtn'>
+      <button bindtap='goToQuestion'>进入测试</button>
+    </view>
+    <!-- 价格 -->
+    <view id='infoOther'>
+      <ul>
+        <li>
+          题数: {{testinginfo.totalnum}}
+        </li>
+        <li>
+          价格:
+          <b style='text-decoration:line-through;color:#999'>￥{{testinginfo.price}} </b>
+          <b style='color:#f00;font-size:16px'> {{testinginfo.score}}积分</b>
+        </li>
+        <li>{{numutil.numstring(testinginfo.downnum)}}已测</li>
+      </ul>
+    </view>
+  </view>
+  <!-- 描述 -->
+  <view id='infoDesc'>
+    <h1>测评介绍</h1>
+    <h2></h2>
+    <p wx:for='{{infoDesc}}' wx:key='{{index}}'>{{item}}</p>
+  </view>
+  <!-- 分享 -->
+  <view class='infoBtn' style='margin:30px auto'>
+    <button open-type="share">分享测评给好友</button>
+  </view>
+
+
+</view>

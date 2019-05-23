@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view id='find' class="page" style='height:100%'>
+  <!-- 背景图 -->
+  <view id='findImg' style='height:100%'>
+    <image class='loginBgImg' src='{{loginImg}}'></image>
+  </view>
+  <!-- 前往 -->
+  <view id='findBtn' bindtap='goToMiniProgram'>
+    <button>前往</button>
+  </view>
+  <!-- 底部 -->
+  <view id='findFoot'>
+    <p>心理鱼</p>
+    <p>Copyright ©2018-2019 MoodFish</p>
+  </view>
+</view>
